@@ -1,9 +1,15 @@
 {
   "manifest_version": 3,
   "name": "Session Cleaner",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Quickly clear session data, cookies, and local storage from the current website with a single click!",
-  "permissions": ["activeTab", "cookies", "scripting", "storage"],
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "scripting",
+    "storage",
+    "contextMenus"
+  ],
   "host_permissions": ["<all_urls>"],
   "action": {
     "default_icon": {

@@ -12,6 +12,9 @@ The **Session Cleaner** Chrome extension provides a quick and easy way to clear 
 - **User-Friendly Interface**: Designed for simplicity and ease of use with a modern popup UI.
 - **Privacy Protection**: Safeguard your online activity with efficient data removal.
 - **Selective Cleaning**: Choose exactly which data types you want to clear (cookies, local storage, session storage, IndexedDB).
+- **Auto Page Reload**: Option to automatically refresh the page after cleaning to ensure changes take effect immediately.
+- **Cleaning History**: Track and view your cleaning activity with detailed timestamps and results.
+- **Success Animations**: Celebratory animations and visual feedback when cleaning is complete.
 - **Visual Feedback**: See a complete summary of what was cleared with counts of removed items.
 - **Preference Saving**: Your cleaning preferences are saved between sessions.
 - **Real-time Progress**: Loading indicators show you when cleaning is in progress.
@@ -20,6 +23,9 @@ The **Session Cleaner** Chrome extension provides a quick and easy way to clear 
 
 - **Enhanced User Interface**: Added a modern, clean popup interface with consistent styling
 - **Customizable Cleaning Options**: Now you can choose which data types to clear
+- **Auto Page Reload**: New option to automatically refresh the page after cleaning
+- **Cleaning History**: Track and view your cleaning activity with timestamps and detailed results
+- **Success Animations**: Celebratory confetti and emoji animations when cleaning completes
 - **Visual Feedback System**: Loading spinners and completion indicators
 - **Cleaning Summary**: Detailed reports of what was removed after cleaning
 - **Saved Preferences**: Your selection of what to clean is remembered
@@ -36,8 +42,10 @@ The **Session Cleaner** Chrome extension provides a quick and easy way to clear 
 
 1. Click the Session Cleaner icon in your Chrome toolbar.
 2. In the popup that appears, select which data types you want to clean.
-3. Click the "Clean Now" button.
-4. View the summary of what was cleaned.
+3. Optionally enable "Auto Reload Page" to automatically refresh the page after cleaning.
+4. Click the "Clean Now" button.
+5. View the summary of what was cleaned and enjoy the success animations!
+6. Use the "View History" button to see your cleaning activity over time.
 
 You can also use the legacy one-click mode by disabling the popup in your browser's extension settings.
 
@@ -48,6 +56,12 @@ Your privacy is important to us. The Session Cleaner extension does not collect 
 ## Support
 
 If you have any questions, issues, or feature requests, please reach out to us at [lokeshkavisth.dev@gmail.com](mailto:lokeshkavisth.dev@gmail.com) or you can DM me at my X Account [@lokeshkavisth](https://x.com/lokeshkavisth)
+
+### ☕ Support the Project
+
+If you find Session Cleaner helpful and would like to support its development, you can buy me a coffee! Your support helps keep this extension free and continuously improved.
+
+**[Buy me a coffee on Ko-fi](https://ko-fi.com/lokeshkavisth)**
 
 ## Contributing
 

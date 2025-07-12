@@ -1,49 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Session Cleaner</title>
-    <link rel="stylesheet" href="popup.css">
-</head>
-<body>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <img src="48icon.png" alt="Session Cleaner Logo" class="logo">
-            <h1>Session Cleaner</h1>
-        </header>
-        
-        <div class="options">
+      <header>
+        <img src="48icon.png" alt="Session Cleaner Logo" class="logo" />
+        <h1>Session Cleaner</h1>
+      </header>
+
+      <!-- Main Tab Navigation -->
+      <div class="main-tabs">
+        <button class="main-tab-btn active" data-tab="clean">
+          <span class="main-tab-icon">🧹</span>
+          Clean
+        </button>
+        <button class="main-tab-btn" data-tab="history">
+          <span class="main-tab-icon">📊</span>
+          History
+        </button>
+      </div>
+
+      <!-- Main Tab Content -->
+      <div class="main-tab-content">
+        <!-- Clean Tab -->
+        <div id="clean-tab" class="main-tab-pane active">
+          <main class="options">
             <div class="option">
-                <input type="checkbox" id="cookies" checked>
-                <label for="cookies">Cookies</label>
+              <label for="cookies" class="toggle-label">
+                <span class="toggle-text">Cookies</span>
+                <div class="toggle-switch">
+                  <input type="checkbox" id="cookies" checked />
+                  <span class="toggle-slider"></span>
+                </div>
+              </label>
             </div>
             <div class="option">
-                <input type="checkbox" id="localStorage" checked>
-                <label for="localStorage">Local Storage</label>
+              <label for="localStorage" class="toggle-label">
+                <span class="toggle-text">Local Storage</span>
+                <div class="toggle-switch">
+                  <input type="checkbox" id="localStorage" checked />
+                  <span class="toggle-slider"></span>
+                </div>
+              </label>
             </div>
             <div class="option">
-                <input type="checkbox" id="sessionStorage" checked>
-                <label for="sessionStorage">Session Storage</label>
+              <label for="sessionStorage" class="toggle-label">
+                <span class="toggle-text">Session Storage</span>
+                <div class="toggle-switch">
+                  <input type="checkbox" id="sessionStorage" checked />
+                  <span class="toggle-slider"></span>
+                </div>
+              </label>
             </div>
             <div class="option">
-                <input type="checkbox" id="indexedDB" checked>
-                <label for="indexedDB">IndexedDB</label>
+              <label for="indexedDB" class="toggle-label">
+                <span class="toggle-text">IndexedDB</span>
+                <div class="toggle-switch">
+                  <input type="checkbox" id="indexedDB" checked />
+                  <span class="toggle-slider"></span>
+                </div>
+              </label>
             </div>
-        </div>
-        
-        <button id="cleanBtn" class="clean-btn">Clean Now</button>
-        
-        <div id="status" class="status hidden">
+            <div class="option">
+              <label for="autoReload" class="toggle-label">
+                <span class="toggle-text">Auto Reload Page</span>
+                <div class="toggle-switch">
+                  <input type="checkbox" id="autoReload" />
+                  <span class="toggle-slider"></span>
+                </div>
+              </label>
+            </div>
+          </main>
+
+          <button id="cleanBtn" class="clean-btn">Clean Now</button>
+
+          <div id="status" class="status hidden">
             <div class="loader"></div>
             <span id="statusText">Cleaning...</span>
-        </div>
-        
-        <div id="summary" class="summary hidden">
+          </div>
+
+          <div id="summary" class="summary hidden">
             <h3>Cleaning Complete!</h3>
             <ul id="summaryList"></ul>
+          </div>
         </div>
+
+        <!-- History Tab -->
+        <div id="history-tab" class="main-tab-pane">
+          <div class="history-header">
+            <h4>Cleaning History</h4>
+            <button id="clearHistory" class="clear-history-btn">
+              Clear All
+            </button>
+          </div>
+
+          <!-- Sub Tab Navigation -->
+          <div class="history-tabs">
+            <button class="tab-btn active" data-tab="recent">
+              <span class="tab-icon">📋</span>
+              Recent
+            </button>
+            <button class="tab-btn" data-tab="stats">
+              <span class="tab-icon">📈</span>
+              Statistics
+            </button>
+          </div>
+
+          <!-- Sub Tab Content -->
+          <div class="tab-content">
+            <!-- Recent History Tab -->
+            <div id="recent-tab" class="tab-pane active">
+              <div id="historyList" class="history-list">
+                <!-- History items will be populated here -->
+              </div>
+            </div>
+
+            <!-- Statistics Tab -->
+            <div id="stats-tab" class="tab-pane">
+              <div class="stats-content">
+                <div class="stat-card">
+                  <div class="stat-number" id="totalCleanings">0</div>
+                  <div class="stat-label">Total Cleanings</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number" id="totalCookies">0</div>
+                  <div class="stat-label">Cookies Removed</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number" id="totalStorage">0</div>
+                  <div class="stat-label">Storage Items</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number" id="favoriteSite">-</div>
+                  <div class="stat-label">Most Cleaned Site</div>
+                </div>
+              </div>
+              <div class="stats-chart">
+                <h5>Last 7 Days Activity</h5>
+                <div id="weeklyChart" class="weekly-chart">
+                  <!-- Chart will be populated here -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="popup.js"></script>
-</body>
-</html> 
+  </body>
+</html>
